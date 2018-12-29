@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="MainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="405.0" minWidth="720.0" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectcrud.Controller">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <center>
+            <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+         <right>
+            <AnchorPane prefHeight="540.0" prefWidth="321.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="dodaj" layoutX="157.0" layoutY="136.0" mnemonicParsing="false" onAction="#insert" text="Dodaj rekord" />
+                  <Button fx:id="usun" layoutX="1.0" layoutY="501.0" mnemonicParsing="false" onAction="#delete" text="Usuń rekord" />
+                  <Button fx:id="wyczysc" layoutX="246.0" layoutY="14.0" mnemonicParsing="false" onAction="#clear" text="Wyczyść" />
+                  <TextField fx:id="cena" layoutX="94.0" layoutY="14.0" />
+                  <TextField fx:id="ilosc" layoutX="94.0" layoutY="92.0" />
+                  <TextField fx:id="model" layoutX="94.0" layoutY="52.0" />
+                  <Label layoutX="14.0" layoutY="18.0" text="Cena" />
+                  <Label layoutX="11.0" layoutY="56.0" text="Model" />
+                  <Label layoutX="16.0" layoutY="96.0" text="Ilość" />
+                  <Button fx:id="edycja" layoutX="-1.0" layoutY="467.0" mnemonicParsing="false" onAction="#fillEditForm" prefHeight="25.0" prefWidth="92.0" text="Edytuj rekord" />
+                  <Button fx:id="wysylanieEdycja" layoutX="194.0" layoutY="136.0" mnemonicParsing="false" onAction="#edit" text="Edytuj" visible="false" />
+                  <Label fx:id="uzupelnionePola" layoutX="56.0" layoutY="215.0" text="Wszystkie pola muszą być uzupełnione." textFill="RED" visible="false" />
+                  <Label fx:id="cenaIloscInt" layoutX="56.0" layoutY="215.0" text="Cena i ilość muszą być typu liczbowego" textFill="RED" visible="false" />
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</VBox>
